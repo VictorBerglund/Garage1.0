@@ -1,0 +1,24 @@
+Vehicle:
+	RegNr
+	Colour
+	NbrOfWheels
+	NbrOfSeats
+
+MotorVehicle:
+	FuelType
+	TypOfEngine
+	TypOfmodel
+
+Car:
+	Brand
+	WheelDrive
+
+Airplane:
+	WingSpan
+
+Buss:
+	FairPrice
+Boat:
+	Length
+Tank:
+	Caliber
