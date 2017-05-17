@@ -13,12 +13,14 @@ namespace Garage_1._0
             Console.Clear();
             Scene.title();
             Console.WriteLine("How many slots do you want in the garage?");
-            int s = int.Parse(Console.ReadLine());
-            string[] garageArray = new string[s];
+            int c = int.Parse(Console.ReadLine());
+            var garage = new Garage<Vehicle>(c); 
+            
            
             while (true)
             {
                 Console.Clear();
+                Scene.title();
                 Console.WriteLine("\n Welcome to the Garage"
                     + "\nPress 1 to add a vehicles to it"
                     + "\nPress 2 to take out a vehicle from your garage"
@@ -42,19 +44,35 @@ namespace Garage_1._0
                 {
                     case '1':
                         Console.Clear();
+                        Scene.title();
                         Console.WriteLine("What vehicle do you whant to add?" 
                             + "\n1 to add a car"
                             + "\n2 to add a Airplane"
                             + "\n3 to add a Buss"
                             + "\n4 to add a Boat"
-                            + "\n5 to add a Tank");
+                            + "\n5 to add a Tank"
+                            + "\n6 to add a Motorcycle");
 
                         char i = char.Parse(Console.ReadLine());
                         switch (i)
                         {
                             case '1':
-                                Creation.AddCar();
-                                Console.WriteLine(Creation.AddCar());
+                                Creation.AddCar(garage);
+                                break;
+                            case '2':
+                                Creation.AddAirplane(garage);
+                                break;
+                            case '3':
+                                Creation.AddBoat(garage);
+                                break;
+                            case '4':
+                                Creation.AddBuss(garage);
+                                break;
+                            case '5':
+                                Creation.AddTank(garage);
+                                break;
+                            case '6':
+                                Creation.AddMotorcycle(garage);
                                 break;
                         }
                         break;
@@ -63,6 +81,13 @@ namespace Garage_1._0
                         break;
 
                     case '3':
+                        Console.Clear();
+                        Scene.title();
+                        foreach (var item in garage)
+                        {
+                            Console.WriteLine(item.Stats());
+                        }
+                        Console.ReadKey();
                         break;
 
                     case '0':

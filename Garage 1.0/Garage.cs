@@ -10,11 +10,12 @@ namespace Garage_1._0
 
     class Garage<T> : IEnumerable<T> where T : Vehicle
     {
-         public  int capacity = 0;
+        public  int capacity = 0;
+        private T[] garage;
 
         public Garage(int capacity)
         {
-            T[] garage = new T[capacity];
+            garage = new T[capacity];
             this.capacity = capacity;
         }
 
@@ -22,7 +23,8 @@ namespace Garage_1._0
         {
             for (int i = 0; i < capacity; i++)
             {
-                yield return null;
+                if(garage[i] != null)
+                yield return garage[i];
             }
         }
 
@@ -31,9 +33,17 @@ namespace Garage_1._0
             return GetEnumerator();
         }
 
-        public void AddCar()
+        public bool AddToArray(T vehicle)
         {
-            Car nCar = new Car();
+            for (int i = 0; i < capacity; i++)
+            {
+                if (garage[i] == null)
+                {
+                    garage[i] = vehicle;
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }

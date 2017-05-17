@@ -37,7 +37,8 @@ namespace Garage_1._0
 
         public virtual string Stats()
         {
-            return "Registration Number: " + RegNr
+            return  this.GetType().Name + "|===========" +
+                "\nRegistration Number: " + RegNr
                 + "\nColour: " + Colour
                 + "\nNumber Of Seats: " + NbrOFSeats;
         }
@@ -121,7 +122,7 @@ namespace Garage_1._0
     }
 
 
-    class Motorcyckle : MotorVehicle
+    class Motorcycle : MotorVehicle
     {
         private int cc;
         public int CC
@@ -150,7 +151,7 @@ namespace Garage_1._0
         public override string Stats()
         {
             return base.Stats()
-            + "\nPrice Of A Fair";
+            + "\nPrice Of A Fair: ";
         }
     }
 
@@ -166,12 +167,12 @@ namespace Garage_1._0
         public override string Stats()
         {
             return base.Stats()
-            + "\nLength" + Length;
+            + "\nLength: " + Length;
         }
     }
 
 
-    class Tank
+    class Tank : MotorVehicle
     {
         private int caliber;
 
@@ -180,6 +181,10 @@ namespace Garage_1._0
             get { return caliber; }
             set { caliber = value; }
         }
-
+        public override string Stats()
+        {
+            return base.Stats()
+            + "\nCaliber: " + Caliber;
+        }
     }
 }
