@@ -13,9 +13,12 @@ namespace Garage_1._0
             Console.Clear();
             Scene.title();
             Console.WriteLine("How many slots do you want in the garage?");
+            int s = int.Parse(Console.ReadLine());
+            string[] garageArray = new string[s];
            
             while (true)
             {
+                Console.Clear();
                 Console.WriteLine("\n Welcome to the Garage"
                     + "\nPress 1 to add a vehicles to it"
                     + "\nPress 2 to take out a vehicle from your garage"
@@ -38,6 +41,7 @@ namespace Garage_1._0
                 switch (input)
                 {
                     case '1':
+                        Console.Clear();
                         Console.WriteLine("What vehicle do you whant to add?" 
                             + "\n1 to add a car"
                             + "\n2 to add a Airplane"
@@ -49,6 +53,8 @@ namespace Garage_1._0
                         switch (i)
                         {
                             case '1':
+                                Creation.AddCar();
+                                Console.WriteLine(Creation.AddCar());
                                 break;
                         }
                         break;

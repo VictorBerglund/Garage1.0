@@ -1,0 +1,3 @@
+﻿1. Implament all creation 
+2. make the array seachable
+3. 

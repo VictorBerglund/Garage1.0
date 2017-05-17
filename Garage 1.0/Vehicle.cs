@@ -14,8 +14,8 @@ namespace Garage_1._0
 
         }
 
-        private int regNr;
-        public virtual int RegNr
+        private string regNr;
+        public virtual string RegNr
         {
             get { return regNr; }
             set { regNr = value; }
@@ -39,7 +39,7 @@ namespace Garage_1._0
         {
             return "Registration Number: " + RegNr
                 + "\nColour: " + Colour
-                + "\nNumber Of Seats" + NbrOFSeats;
+                + "\nNumber Of Seats: " + NbrOFSeats;
         }
 
 

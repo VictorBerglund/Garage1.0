@@ -10,8 +10,8 @@ namespace Garage_1._0
     {
         static void Main(string[] args)
         {
-            Scene.load();
-            System.Threading.Thread.Sleep(3000);
+           // Scene.load();
+            //System.Threading.Thread.Sleep(3000);
             Menu.menu();
         }
     }
