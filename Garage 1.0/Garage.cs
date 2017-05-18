@@ -59,5 +59,10 @@ namespace Garage_1._0
             if(idxrem == 0)
                 garage[i - 1] = null;
         }
+
+        public IEnumerable<Vehicle> Search()
+        {
+            return garage.Where(veh => (veh as Motorcycle)?.CC < 100);
+        }
     }
 }

@@ -43,6 +43,7 @@ namespace Garage_1._0
                     + "\nPress 1 to add a vehicles to it"
                     + "\nPress 2 to take out a vehicle from your garage"
                     + "\nPress 3 to view your garage"
+                    + "\nPress 4 to search"
                     + "\nPress 0 to exit");
                 Console.Write("> ");
 
@@ -109,6 +110,10 @@ namespace Garage_1._0
                             Console.WriteLine(item.Stats());
                         }
                         Console.ReadKey();
+                        break;
+
+                    case '4':
+                        Console.WriteLine(garage.Search());
                         break;
 
                     case '0':
