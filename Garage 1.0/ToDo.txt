@@ -1,3 +1,9 @@
-﻿1. Implament all creation 
-2. make the array seachable
-3. 
+﻿1. Implament all creation					DONE	
+
+2. make the array seachable					
+
+3. Remove a vehicle from the arry			DONE
+
+4. Fix aesthetics							
+
+5. 

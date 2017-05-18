@@ -99,7 +99,6 @@ namespace Garage_1._0
             aplane.TypOfModel = Console.ReadLine();
 
             bool y = true;
-            int x = 0;
             while (y)
             {
                 try
@@ -108,7 +107,7 @@ namespace Garage_1._0
                     Scene.title();
                     Console.WriteLine("What is the wingspan?");
                     Console.Write("> ");
-                    x = int.Parse(Console.ReadLine());
+                    aplane.WingSpan = int.Parse(Console.ReadLine());
                     y = false;
 
                 }
@@ -122,7 +121,6 @@ namespace Garage_1._0
                 }
 
             }
-            aplane.WingSpan = x;
 
             Console.Clear();
             Scene.title();
@@ -168,7 +166,9 @@ namespace Garage_1._0
             buss.TypOfModel = Console.ReadLine();
 
             bool y = true;
-            int x = 0;
+            Console.Clear();
+            Scene.title();
+
             while (y)
             {
                 try
@@ -177,7 +177,7 @@ namespace Garage_1._0
                     Scene.title();
                     Console.WriteLine("What is the Price of a fair?");
                     Console.Write("> ");
-                    x = int.Parse(Console.ReadLine());
+                    buss.FairPrice = int.Parse(Console.ReadLine());
                     y = false;
 
                 }
@@ -189,9 +189,7 @@ namespace Garage_1._0
                     Console.ReadKey();
                     y = true;
                 }
-
             }
-            buss.FairPrice = x;
 
             Console.Clear();
             Scene.title();
@@ -233,12 +231,12 @@ namespace Garage_1._0
             boat.TypOfEngine = Console.ReadLine();
 
             Console.Clear();
+            Scene.title();
             Console.WriteLine("What model is the boat?");
             Console.Write("> ");
             boat.TypOfModel = Console.ReadLine();
 
             bool y = true;
-            int x = 0;
             Console.Clear();
             Scene.title();
             while (y)
@@ -249,8 +247,7 @@ namespace Garage_1._0
                     Scene.title();
                     Console.WriteLine("What is the legnth of the boat?");
                     Console.Write("> ");
-                    boat.Length = int.Parse(Console.ReadLine());
-                    x = int.Parse(Console.ReadLine());
+                    boat.Length = int.Parse(Console.ReadLine()); 
                     y = false;
 
                 }
@@ -264,7 +261,7 @@ namespace Garage_1._0
                 }
 
             }
-            boat.Length = x;
+
 
             Console.Clear();
             Scene.title();
@@ -311,7 +308,6 @@ namespace Garage_1._0
             mc.TypOfModel = Console.ReadLine();
 
             bool y = true;
-            int x = 0;
             while (y)
             {
                 try
@@ -320,7 +316,7 @@ namespace Garage_1._0
                     Scene.title();
                     Console.WriteLine("What is the cc?");
                     Console.Write("> ");
-                    x = int.Parse(Console.ReadLine());
+                    mc.CC = int.Parse(Console.ReadLine());
                     y = false;
 
                 }
@@ -334,7 +330,6 @@ namespace Garage_1._0
                 }
 
             }
-            mc.CC = x;
 
             Console.Clear();
             Scene.title();
@@ -384,13 +379,7 @@ namespace Garage_1._0
             Console.Write("> ");
             tank.TypOfModel = Console.ReadLine();
 
-            Console.Clear();
-            Scene.title();
-            Console.WriteLine("What is the caliber?");
-            Console.Write("> ");
-            tank.Caliber = int.Parse(Console.ReadLine());
             bool y = true;
-            int x = 0;
             Console.Clear();
             Scene.title();
             while (y)
@@ -402,7 +391,6 @@ namespace Garage_1._0
                     Console.WriteLine("What is the caliber?");
                     Console.Write("> ");
                     tank.Caliber = int.Parse(Console.ReadLine());
-                    x = int.Parse(Console.ReadLine());
                     y = false;
 
                 }
@@ -416,7 +404,6 @@ namespace Garage_1._0
                 }
 
             }
-            tank.Caliber = x;
 
             Console.Clear();
             Scene.title();

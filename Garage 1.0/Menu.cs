@@ -10,13 +10,31 @@ namespace Garage_1._0
     {
         public static void menu()
         {
-            Console.Clear();
-            Scene.title();
-            Console.WriteLine("How many slots do you want in the garage?");
-            int c = int.Parse(Console.ReadLine());
-            var garage = new Garage<Vehicle>(c); 
-            
-           
+            int c = 0;
+
+            do
+               {
+                   try
+                    {
+
+                        Console.Clear();
+                        Scene.title();
+                        Console.WriteLine("How many slots do you want in the garage?");
+                        Console.Write("> ");
+                        c = int.Parse(Console.ReadLine());
+                        if (c <= 0)
+                        {
+                            Console.WriteLine("There has to be at least 1 slot in the garage");
+                        }
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Ivalid input bitch");
+                    }
+            } while (c <= 0);
+
+            var garage = new Garage<Vehicle>(c);
+
             while (true)
             {
                 Console.Clear();
@@ -48,10 +66,11 @@ namespace Garage_1._0
                         Console.WriteLine("What vehicle do you whant to add?" 
                             + "\n1 to add a car"
                             + "\n2 to add a Airplane"
-                            + "\n3 to add a Buss"
-                            + "\n4 to add a Boat"
+                            + "\n3 to add a Boat"
+                            + "\n4 to add a Buss"
                             + "\n5 to add a Tank"
-                            + "\n6 to add a Motorcycle");
+                            + "\n6 to add a Motorcycle"
+                            + "\n0 to exit");
 
                         char i = char.Parse(Console.ReadLine());
                         switch (i)
@@ -78,11 +97,13 @@ namespace Garage_1._0
                         break;
 
                     case '2':
+                        Remove.FromArray(garage);
                         break;
 
                     case '3':
                         Console.Clear();
                         Scene.title();
+                        Console.WriteLine("There are " + c + " slots in the garage");
                         foreach (var item in garage)
                         {
                             Console.WriteLine(item.Stats());

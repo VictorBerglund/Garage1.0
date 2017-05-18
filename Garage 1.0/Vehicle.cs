@@ -37,7 +37,7 @@ namespace Garage_1._0
 
         public virtual string Stats()
         {
-            return  this.GetType().Name + "|===========" +
+            return "\n" + this.GetType().Name + "|===========" +
                 "\nRegistration Number: " + RegNr
                 + "\nColour: " + Colour
                 + "\nNumber Of Seats: " + NbrOFSeats;
@@ -151,7 +151,7 @@ namespace Garage_1._0
         public override string Stats()
         {
             return base.Stats()
-            + "\nPrice Of A Fair: ";
+            + "\nPrice Of A Fair: " + FairPrice;
         }
     }
 

@@ -45,5 +45,19 @@ namespace Garage_1._0
             }
             return false;
         }
+
+        public void RemoveFromArray(int idxrem)
+        {
+            int i;
+            for ( i= 0; i < capacity && idxrem > 0; i++)
+            {
+                if (garage[i] != null)
+                {
+                    idxrem--;
+                }
+            }
+            if(idxrem == 0)
+                garage[i - 1] = null;
+        }
     }
 }
