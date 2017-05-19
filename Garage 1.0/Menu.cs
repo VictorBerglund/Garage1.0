@@ -74,7 +74,7 @@ namespace Garage_1._0
                         break;
 
                     case '4':
-                        Searching.ForSugerMan();
+                        Searching.ForSugerMan(garage);
                         break;
                     case 't':
                         TestGarage.test(garage, c);

@@ -33,7 +33,7 @@ namespace Garage_1._0
         public static void title()
         {
             Console.WriteLine("                         **************************");
-            Console.WriteLine("                         *     THE GRARGE 1.0     *");
+            Console.WriteLine("                         *     THE GARAGE 1.0     *");
             Console.WriteLine("                         **************************");
             Console.WriteLine("\n");
         }
