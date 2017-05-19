@@ -49,7 +49,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Remove.cs" />
     <Compile Include="Scene.cs" />
+    <Compile Include="Searching.cs" />
+    <Compile Include="TestGarage.cs" />
     <Compile Include="Vehicle.cs" />
+    <Compile Include="ViewGarage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

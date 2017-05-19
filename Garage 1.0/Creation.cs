@@ -8,7 +8,45 @@ namespace Garage_1._0
 {
     class Creation
     {
-    public static string AddCar(Garage<Vehicle> garage)
+
+        public static void menu(Garage<Vehicle> garage)
+        {
+            Console.Clear();
+            Scene.title();
+            Console.WriteLine("What vehicle do you whant to add?"
+                + "\n1 to add a car"
+                + "\n2 to add a Airplane"
+                + "\n3 to add a Boat"
+                + "\n4 to add a Buss"
+                + "\n5 to add a Tank"
+                + "\n6 to add a Motorcycle"
+                + "\n0 to exit");
+
+            char i = char.Parse(Console.ReadLine());
+            switch (i)
+            {
+                case '1':
+                    AddCar(garage);
+                    break;
+                case '2':
+                    AddAirplane(garage);
+                    break;
+                case '3':
+                    AddBoat(garage);
+                    break;
+                case '4':
+                    AddBuss(garage);
+                    break;
+                case '5':
+                    AddTank(garage);
+                    break;
+                case '6':
+                    AddMotorcycle(garage);
+                    break;
+            }
+        }
+
+        public static string AddCar(Garage<Vehicle> garage)
         {
             
             Car car = new Car();

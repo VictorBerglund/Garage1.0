@@ -2,7 +2,7 @@
 
 2. make the array seachable					
 
-3. Remove a vehicle from the arry			DONE
+3. Remove a vehicle from the array			DONE
 
 4. Fix aesthetics							
 

@@ -60,9 +60,9 @@ namespace Garage_1._0
                 garage[i - 1] = null;
         }
 
-        public IEnumerable<Vehicle> Search()
+        public IEnumerable<Vehicle> SearchRegNr(string rgSearch)
         {
-            return garage.Where(veh => (veh as Motorcycle)?.CC < 100);
+            return garage.Where(veh => (veh as Vehicle)?.RegNr == rgSearch);
         }
     }
 }

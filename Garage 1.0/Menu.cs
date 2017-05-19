@@ -62,39 +62,7 @@ namespace Garage_1._0
                 switch (input)
                 {
                     case '1':
-                        Console.Clear();
-                        Scene.title();
-                        Console.WriteLine("What vehicle do you whant to add?" 
-                            + "\n1 to add a car"
-                            + "\n2 to add a Airplane"
-                            + "\n3 to add a Boat"
-                            + "\n4 to add a Buss"
-                            + "\n5 to add a Tank"
-                            + "\n6 to add a Motorcycle"
-                            + "\n0 to exit");
-
-                        char i = char.Parse(Console.ReadLine());
-                        switch (i)
-                        {
-                            case '1':
-                                Creation.AddCar(garage);
-                                break;
-                            case '2':
-                                Creation.AddAirplane(garage);
-                                break;
-                            case '3':
-                                Creation.AddBoat(garage);
-                                break;
-                            case '4':
-                                Creation.AddBuss(garage);
-                                break;
-                            case '5':
-                                Creation.AddTank(garage);
-                                break;
-                            case '6':
-                                Creation.AddMotorcycle(garage);
-                                break;
-                        }
+                        Creation.menu(garage);
                         break;
 
                     case '2':
@@ -102,18 +70,14 @@ namespace Garage_1._0
                         break;
 
                     case '3':
-                        Console.Clear();
-                        Scene.title();
-                        Console.WriteLine("There are " + c + " slots in the garage");
-                        foreach (var item in garage)
-                        {
-                            Console.WriteLine(item.Stats());
-                        }
-                        Console.ReadKey();
+                        ViewGarage.Show(garage, c);
                         break;
 
                     case '4':
-                        Console.WriteLine(garage.Search());
+                        Searching.ForSugerMan();
+                        break;
+                    case 't':
+                        TestGarage.test(garage, c);
                         break;
 
                     case '0':
